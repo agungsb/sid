@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 25, 2014, 2:26:29 PM
+    Author     : Agung Surya Bangsa
+*/
+
+.loader{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: url(/sid/gambar/loader_unj.gif) 50% 50% no-repeat rgba(249,249,249, 1.0);
+}
+
+.editable_input_text, .editable_select, .disabled_input_text{
+    background: url(/sid/gambar/loader_noBg.gif) left no-repeat transparent;
+    border: none;
+}
+
+.nav_pasfoto{
+    background: transparent;
+    float: none;
+    margin: 0 auto;
+    border: 1px solid #2a6d4f;
+}
+
+/*OVERRIDE STYLE FROM AdminLTE.css */
+.user-panel > .image > img{
+    width: 100%;
+    height: auto !important;
+}
+
+/*OVERRIDE STYLE FROM Boostrap.min.css */
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+    background-color: #3d9970;
+    border-color: #3d9970;
+}

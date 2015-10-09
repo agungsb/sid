@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteBase /sid/
+
+RewriteRule ^beranda index.php?id=$1
+
+RewriteRule ^user/beranda user/index.php?id=$1
+
+RewriteRule ^user/data/data_dosen user/data/data_dosen.php?id=$1
+RewriteRule ^user/data/riwayat_mengajar user/data/riwayat_mengajar.php?id=$1
+RewriteRule ^user/data/riwayat_pendidikan user/data/riwayat_pendidikan.php?id=$1
+
+RewriteRule ^user/upload/u_pasfoto user/upload/u_pasfoto.php?id=$1
+
+#Look for the word "detail" followed by a slash, and then the article title
+RewriteRule ^detail/(.+)$ detail_dosen.php?nidn=$1 [L]
+RewriteRule ^user/detail/(.+)$ user/detail_dosen.php?nidn=$1 [L]
+
+RewriteRule ^user/daftar_pengguna/edit user/daftar_pengguna/edit_pengguna.php [L]
+
+RewriteRule ^user/data/edit_riwayat_mengajar user/data/edit_riwayat_mengajar.php?nidn=$1 [L]
+RewriteRule ^user/data/edit_riwayat_pendidikan user/data/edit_riwayat_pendidikan.php?nidn=$1 [L]
+
+RewriteRule ^gambar/.*\.(php|rb|py)$ - [F,L,NC]
+
+Options -Indexes 
